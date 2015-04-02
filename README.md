@@ -1,16 +1,23 @@
 # CV maker webapp
 DevLead:  Alexey Remnev
 PM: Alexey Remnev
-Participated:
-Technologies: 
+
+# Technologies: 
 database: mysql/postgre/oracle/mongo/cassandra
+
 language: 
 python: django/pyramid
+
 ruby: rails
+
 node: express
+
 php: symphony/zend/(cake/drupal)
+
 perl: Catalyst
+
 UI: bootstrap/jquery/backbone/angular/sass/less
+
 # Introduction
 Create web application for creation and sharing CV. This document describes general idea, which can be extended easily in sense of scope.
 # Functional requirements
