@@ -28,3 +28,4 @@ class Project(models.Model):
     responsibilities = models.CharField(max_length=1000)
     achievements = models.CharField(max_length=200)
     technologies = models.CharField(max_length=100)
+    cv = models.ForeignKey(CV)
