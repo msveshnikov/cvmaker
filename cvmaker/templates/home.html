@@ -1,15 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>CV Maker</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-<h1>CV Maker</h1>
+{% block main %}
+<div>
 
-Welcome to best CV making app ever!
-<br>
-Please login to Google+
-</html>
+    <h1>CV Maker</h1>
+
+    Welcome to best CV making app ever!
+    <br>
+    Please login to Google+
+
+    <h1>Third-party authentication demo</h1>
+
+    <p>
+    <ul>
+        {% if user and not user.is_anonymous %}
+        <li>
+            <a>Hello {{ user.get_full_name|default:user.username }}!</a>
+        </li>
+        <li>
+            <a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a>
+        </li>
+        {% else %}
+        </li>
+        <li>
+            <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login with Google</a>
+        </li>
+        <li>
+            <a href="{% url 'social:begin' 'linkedin' %}?next={{ request.path }}">Login with Linked In</a>
+        </li>
+        {% endif %}
+    </ul>
+    </p>
+</div>
+{% endblock %}
