@@ -100,6 +100,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 AUTHENTICATION_BACKENDS = (
     'social.backends.facebook.FacebookOAuth2',
     'social.backends.google.GoogleOAuth2',
+    'social.backends.linkedin.LinkedinOAuth2',
     'social.backends.twitter.TwitterOAuth',
     'django.contrib.auth.backends.ModelBackend',
 )
@@ -109,7 +110,10 @@ LOGIN_REDIRECT_URL = '/'
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = "803335827642-kkrjdmaqps0n139revsg01qsiipi8572.apps.googleusercontent.com"
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = "R9lqNYjY5NCieSC-BCnObCoU"
 
-
+GOOGLE_OAUTH_EXTRA_DATA = [
+    ('image', 'image'),
+    ('picture', 'picture'),
+]
 
 
 

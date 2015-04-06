@@ -18,15 +18,17 @@
             <a>Hello {{ user.get_full_name|default:user.username }}!</a>
         </li>
         <li>
-            <a href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a>
+            <a class="btn btn-primary" href="{% url 'auth:logout' %}?next={{ request.path }}">Logout</a>
         </li>
         {% else %}
         </li>
         <li>
-            <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login with Google</a>
+            <a class="btn btn-primary" href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}">Login
+                with Google</a>
         </li>
         <li>
-            <a href="{% url 'social:begin' 'linkedin' %}?next={{ request.path }}">Login with Linked In</a>
+            <a class="btn btn-primary" href="{% url 'social:begin' 'linkedin-oauth2' %}?next={{ request.path }}">Login
+                with Linked In</a>
         </li>
         {% endif %}
     </ul>
