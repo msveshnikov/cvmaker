@@ -5,10 +5,13 @@
 
     <h1>CV Maker</h1>
 
+    <p>
+
     Welcome to best CV making app ever!
     <br>
     Please login to Google+
 
+    </p>
     <h1>Third-party authentication demo</h1>
 
     <p>
@@ -33,5 +36,13 @@
         {% endif %}
     </ul>
     </p>
+
+    <form action="/cv/" method="post">
+        <label for="aboutme">About Me: </label>
+        <input id="aboutme" type="text" name="aboutme" value="{{ current_name }}">
+        <input type="submit" value="OK">
+    </form>
+
+
 </div>
 {% endblock %}

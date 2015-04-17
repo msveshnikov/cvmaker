@@ -8,6 +8,7 @@ from django.template.context import RequestContext
 def home(request):
     context = RequestContext(request,
                              {'request': request,
-                              'user': request.user})
+                              'user': request.user,
+                              'current_name': 'Max'})
     return render_to_response('home.html',
                               context_instance=context)
