@@ -1,6 +1,4 @@
 # CV maker webapp
-DevLead:  Alexey Remnev
-PM: Alexey Remnev
 
 # Technologies: 
 database: mysql/postgre/oracle/mongo/cassandra
